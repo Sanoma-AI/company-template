@@ -1,0 +1,11 @@
+# Secrets must never be committed; credentials live in a secret store.
+.env
+.env.*
+*.pem
+*.key
+
+node_modules/
+dist/
+# Local run state, such as the ledger.
+.sanoma/
+.DS_Store

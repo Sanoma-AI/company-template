@@ -1,0 +1,33 @@
+{
+  "name": "company-template",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "db:up": "docker compose up -d --wait",
+    "db:down": "docker compose down",
+    "typecheck": "tsc -p tsconfig.json",
+    "lint": "oxlint --deny-warnings",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@sanoma/connector-bluesky": "^0.1.0",
+    "@sanoma/connector-ghost": "^0.1.0",
+    "@sanoma/connector-resend": "^0.1.0",
+    "@sanoma/testing": "^0.1.0",
+    "@sanoma/workflows": "^0.1.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "oxfmt": "^0.72.0",
+    "oxlint": "^1.87.0",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.3"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "packageManager": "pnpm@11.15.1"
+}
