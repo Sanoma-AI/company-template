@@ -1,6 +1,6 @@
 import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
-import { lintWorkflow } from "@sanoma/workflows";
+import { lintWorkflow } from "@sanoma/workflows/lint";
 import { describe, expect, it } from "vitest";
 
 // Workflows and policies are replayed after a restart, so they must decide the same way

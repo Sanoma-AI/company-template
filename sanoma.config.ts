@@ -12,7 +12,8 @@ export default defineConfig({
   // The connectors (from @sanoma/connector-*) whose operations the workflows use.
   connectors: [],
   // One driver per vendor, implementing the connectors' operations. Until you have real
-  // drivers, `fakeMarketingVendors()` from @sanoma/testing fakes Ghost, Resend and Bluesky.
+  // drivers, each connector's fake stands in, e.g. `fakeGhost({ file: ".sanoma/fake-ghost.json" }).driver`
+  // from @sanoma/connector-ghost/fake.
   drivers: [],
   policy,
   ledger: jsonlLedger(".sanoma/ledger"),
