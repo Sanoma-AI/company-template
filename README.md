@@ -57,7 +57,7 @@ Until the `@sanoma/*` packages are published to npm, `pnpm install` cannot resol
 
    Workflows are replayed after a restart, so they must do the same thing every time: use `ctx.now()` and `ctx.sleep()` instead of `Date` and timers, take configuration as input instead of `process.env`, and import only from `@sanoma/*`, zod and relative files. `pnpm lint` (with the rules `@sanoma/workflows` ships, which `.oxlintrc.json` extends) and `pnpm test` check for this.
 
-3. In `sanoma.config.ts`, add the workflow to `workflows`, its connectors to `connectors`, and a driver for each vendor to `drivers`. Until you have real drivers, each connector's fake stands in: `fakeGhost`, `fakeResend` and `fakeBluesky` from `@sanoma/connector-ghost/fake` and so on. Pass them one `calls` array to see every vendor's calls in one order, and `{ file: ".sanoma/fake-ghost.json" }` to keep a fake's state on disk.
+3. In `sanoma.config.ts`, add the workflow to `workflows`, its connectors to `connectors`, and a driver for each vendor to `drivers`. Each connector has two: the real one from its `/driver` entry (`ghostDriver()` from `@sanoma/connector-ghost/driver`, `resendDriver({ from })`, `blueskyDriver()`), which reads its credentials from the environment on every call, and a fake from its `/fake` entry (`fakeGhost`, `fakeResend`, `fakeBluesky`) for development and tests. Pass the fakes one `calls` array to see every vendor's calls in one order, and `{ file: ".sanoma/fake-ghost.json" }` to keep a fake's state on disk. Only the config imports drivers; the lint refuses a workflow that does. Each connector's README names its variables and the vendor plan it needs.
 4. Decide what needs approval in `policies/policy.ts`; the comment there shows the pattern (`approvedFor`).
 5. Add a test that starts a worker with the config (`startTestWorker` from `@sanoma/testing`, on `testDatabaseUrl("<file>")`), starts the workflow with `SanomaClient` as someone (`startedBy: { id: "alice" }`), decides its approvals (`client.decide(runId, { decision: "approve", by: { id: "editor" } })`) and checks the ledger. Branch on `errorCode(err)`, not `instanceof`.
 
@@ -69,7 +69,7 @@ When a worker starts, it warns about unfinished runs it will not pick up, naming
 
 ## Credentials
 
-Vendor credentials live in a secret store, never in this repo. Do not commit tokens, API keys or `.env` files.
+Vendor credentials live in a secret store, never in this repo. Do not commit tokens, API keys or `.env` files. The real drivers read them from the environment: export them in the shell, or keep them in an ignored `.env` and run with `node --env-file-if-exists=.env`.
 
 ## License
 

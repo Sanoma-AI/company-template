@@ -11,8 +11,8 @@ export default defineConfig({
   workflows: [],
   // The connectors (from @sanoma/connector-*) whose operations the workflows use.
   connectors: [],
-  // One driver per vendor, implementing the connectors' operations. Until you have real
-  // drivers, each connector's fake stands in, e.g. `fakeGhost({ file: ".sanoma/fake-ghost.json" }).driver`
+  // One driver per vendor, implementing the connectors' operations: the real one, e.g. `ghostDriver()`
+  // from @sanoma/connector-ghost/driver, or its fake, e.g. `fakeGhost({ file: ".sanoma/fake-ghost.json" }).driver`
   // from @sanoma/connector-ghost/fake.
   drivers: [],
   policy,
