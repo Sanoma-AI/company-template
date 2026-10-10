@@ -15,6 +15,11 @@ export default defineConfig({
   // from @sanoma/connector-ghost/driver, or its fake, e.g. `fakeGhost({ file: ".sanoma/fake-ghost.json" }).driver`
   // from @sanoma/connector-ghost/fake.
   drivers: [],
+  // The fakes a Test run calls instead of the drivers, e.g. `fakeGhost()` from @sanoma/connector-ghost/fake.
+  // The Test button on a workflow's page and `describeScenarios` from @sanoma/testing/scenarios run the
+  // scenarios in scenarios/ against them; the policy, approvals and ledger stay as in a live run.
+  fakes: [],
+  scenarios: new URL("./scenarios/", import.meta.url),
   policy,
   ledger: jsonlLedger(".sanoma/ledger"),
   appName: "company",
