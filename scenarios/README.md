@@ -1,6 +1,6 @@
 # Scenarios
 
-A scenario says how a workflow should go against the vendors' fakes: what already exists at the vendors, what the workflow is started with, who approves what, and which operations it must and must not call. Scenarios live here as Gherkin `.feature` files, one directory per workflow, and are read by the app (the Test button on a workflow's page) and by `describeScenarios` from `@sanoma/testing/scenarios`. A Test run uses the `fakes` from `sanoma.config.ts` instead of the drivers; the policy, approvals and ledger are the same as in a live run, and sleeps are recorded but not waited.
+A scenario says how a workflow should go against the vendors' fakes: what already exists at the vendors, what the workflow is started with, who approves what, and which operations it must and must not call. Scenarios live here as Gherkin `.feature` files, one directory per workflow, and are read by the app (Sandbox in New run on a workflow's page) and by `describeScenarios` from `@sanoma/testing/scenarios`. A sandbox run uses the `fakes` from `sanoma.config.ts` instead of the drivers; the policy, approvals and ledger are the same as in a live run, and sleeps are recorded but not waited.
 
 ```gherkin
 Feature: announce
