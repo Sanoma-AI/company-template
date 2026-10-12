@@ -16,7 +16,7 @@ export default defineConfig({
   // from @sanoma/connector-ghost/fake.
   drivers: [],
   // The fakes a sandbox run calls instead of the drivers, e.g. `fakeGhost()` from @sanoma/connector-ghost/fake.
-  // Sandbox in New run on a workflow's page and `describeScenarios` from @sanoma/testing/scenarios run the
+  // Sandbox on a workflow's page (its New run form) and `describeScenarios` from @sanoma/testing/scenarios run the
   // scenarios in scenarios/ against them; the policy, approvals and ledger stay as in a live run.
   fakes: [],
   scenarios: new URL("./scenarios/", import.meta.url),
