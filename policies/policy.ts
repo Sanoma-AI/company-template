@@ -1,23 +1,19 @@
-import { allow, definePolicy } from "@sanoma/workflows";
+import { allow, approve, approvedFor, definePolicy } from "sanoma";
+
+const EDITOR = "editor";
 
 /**
- * Checked before every operation call a workflow makes. Return `allow()`, `deny(reason)`
- * (the run fails) or `approve(who)` (the run waits until that person approves).
+ * Checked before every call a workflow makes: `allow()`, `deny(reason)` (the run fails) or
+ * `approve(who)` (the run waits until that person approves).
  *
- * This one allows everything. To have a person sign off on anything that publishes or
- * sends, import `approve` and `approvedFor` too and use:
+ * Anything that publishes or sends needs the editor; everything else is allowed. A call passes
+ * when the editor approved an approval in this run that was addressed to them and covers it
+ * (`approvedFor`); otherwise it is held until they approve it.
  *
- *   export default definePolicy(({ op, effect, run }) => {
- *     if (effect !== "publish" && effect !== "send") return allow();
- *     return approvedFor(run.approvals, op.id, "marketing-lead") ? allow() : approve("marketing-lead");
- *   });
- *
- * `approvedFor` passes a call when an approval in the run was approved, covers this
- * operation, and was addressed to the marketing lead. A workflow that asks the lead up front
- * with `ctx.approval(title, { approver: "marketing-lead", covers: [...] })` gets the covered
- * calls through on that one sign-off; any other call is held until the lead approves it.
- *
- * A policy must decide the same way every time from the call alone (no clock, randomness
- * or network), because runs are replayed after a restart. `pnpm test` lints this file for that.
+ * Deterministic: the decision depends on the call alone (no clock, randomness or network), so
+ * a replayed run decides the same way.
  */
-export default definePolicy(() => allow());
+export default definePolicy(({ op, effect, run }) => {
+  if (effect !== "publish" && effect !== "send") return allow();
+  return approvedFor(run.approvals, op.id, EDITOR) ? allow() : approve(EDITOR);
+});
