@@ -18,7 +18,7 @@ Run state goes to `.sanoma/` (ignored), including the ledger: one JSONL file per
 
 ## Run
 
-Needs Node 24 or later, pnpm and Docker.
+Needs Node 26 or later, pnpm and Docker. With [mise](https://mise.jdx.dev), `mise install` sets up Node and pnpm from `.mise.toml`.
 
 ```sh
 pnpm install
