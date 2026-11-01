@@ -15,11 +15,9 @@ export default defineConfig({
       // The host delivers these bootstrap keys at start; they are never stored in the database.
       SANOMA_SIGNING_KEY: { bootstrap: "SANOMA_SIGNING_KEY" },
       SANOMA_SECRETS_KEY: { bootstrap: "SANOMA_SECRETS_KEY" },
-      // Sanoma's sender for sign-in codes, which the host is given; on a laptop, a Resend key of your own, or none.
-      RESEND_API_KEY: { env: "RESEND_API_KEY" },
-      RESEND_FROM: { env: "RESEND_FROM" },
     },
   },
-  // Sign-in codes go out through Resend: the built-in `login-code` workflow, as the runtime's agent `login`.
+  // Sign-in codes go out through Resend (the built-in `login-code` workflow, as the runtime's agent
+  // `login`): Sanoma's sender on a Sanoma Cloud host; on a laptop, a Resend key of your own, or none.
   login: { sender: resend.emails.send },
 });

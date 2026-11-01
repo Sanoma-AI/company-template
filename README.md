@@ -11,7 +11,7 @@ Needs Node 26 or later and pnpm (with [mise](https://mise.jdx.dev), `mise instal
 ```sh
 pnpm install
 pnpm dev      # the company's own Postgres (.sanoma/postgres), the worker and the app, at the printed address
-pnpm check    # tsc, the lint, the policies, what the worker would refuse, and every scenario
+pnpm check    # tsc, the lint, the policies, what the worker would refuse, the sites' build and types, and every scenario
 ```
 
 Credentials never go in this repository: `.env` (ignored) holds this machine's, and the app's connector pages store a vendor's encrypted in the database. On Sanoma Cloud the host delivers them.
