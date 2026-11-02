@@ -1,0 +1,30 @@
+name: Check company
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    services:
+      postgres:
+        image: postgres:18
+        env:
+          POSTGRES_PASSWORD: dbos
+          POSTGRES_DB: company
+        ports: ["5433:5432"]
+        options: >-
+          --health-cmd "pg_isready -U postgres" --health-interval 2s --health-retries 15
+    env:
+      SANOMA_DATABASE_URL: postgresql://postgres:dbos@localhost:5433/company
+    steps:
+      - uses: actions/checkout@v4
+      - uses: jdx/mise-action@2d8d4cafcbd33be2ea37d2b6f5ad595363d1f1ca # v5.1.1
+      - run: pnpm install --frozen-lockfile
+      # Scenario fakes and the disposable database; no deployment or vendor credentials.
+      - run: pnpm check

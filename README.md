@@ -14,7 +14,15 @@ pnpm dev      # the company's own Postgres (.sanoma/postgres), the worker and th
 pnpm check    # tsc, the lint, the policies, what the worker would refuse, the sites' build and types, and every scenario
 ```
 
+GitHub Actions runs `pnpm check` on pull requests and pushes to main against a disposable Postgres service. Scenarios use connector fakes; the check neither provisions cloud resources nor needs vendor credentials.
+
 Credentials never go in this repository: `.env` (ignored) holds this machine's, and the app's connector pages store a vendor's encrypted in the database. On Sanoma Cloud the host delivers them.
+
+## Credential storage
+
+`secrets.ts` selects the deployment's store and bootstrap bindings. The template starts with encrypted Postgres and independent host-supplied signing/encryption keys. Managed Cloud signup can replace this file with `managedKmsStore` configuration, supplying only the company's restricted database login and runtime identity bootstrap to its host. That managed integration is tracked in [Sanoma #532](https://github.com/Sanoma-AI/sanoma/issues/532); this template change alone does not deploy it.
+
+For BYOC, select your own supported store in this file, such as Supabase Vault. Moving existing credentials requires an explicit transfer and cutover; changing the configuration does not migrate stored values. Keep the logical secret and connection names stable.
 
 ## License
 
