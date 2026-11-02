@@ -6,6 +6,7 @@ This repository is a company's operations as code, run by [Sanoma](https://githu
 
 ```
 sanoma.config.ts     the connectors and the sign-in code's sender (every workflow under workflows/ and apps/*/workflows/ is found)
+secrets.ts           the deployment's selected credential store and explicit bootstrap bindings; no secret values
 workflows/           one workflow per file, its default export (defineWorkflow)
 policies/*.cedar     who may do what: Cedar forbids, each a hold for an approver (@hold) or a deny (@reason)
 resources/           data files: the vendor objects this company declares, by area
