@@ -1,78 +1,20 @@
 # company-template
 
-Starting point for a company's own Sanoma configuration repo. Create a new repo from this template, then describe the company's business processes as code: workflows that call vendors through connectors, a policy that decides which calls need a person's approval, and a ledger that records what happened. Sanoma runs them durably on Postgres.
+The repository a company on [Sanoma Cloud](https://www.sanoma.work) starts from: sign-up makes a private copy of it in your own GitHub account, writes you into `resources/people.ts` and your database and host into `resources/sanoma/infra.ts`, and runs it at `<company>.sanoma.work`. A company's operations as code: workflows that call vendors through connectors, the people who use it, Cedar policies that decide which calls wait for someone's approval, and the vendor objects it owns, declared as data. [AGENTS.md](AGENTS.md) describes the layout and the rules; the `sanoma` package's README (`node_modules/sanoma/README.md`) is the manual.
 
-Status: early. The `@sanoma/*` packages are at 0.x and the API may change between minor versions.
-
-## Layout
-
-```
-├── sanoma.config.ts   workflows, connectors, drivers, policy and ledger for the worker
-├── workflows/         one file per workflow (defineWorkflow)
-├── policies/          policy.ts (definePolicy): allows everything until you change it
-├── resources/         finance/, people/, identity/, billing/ (empty: resources come after the MVP)
-└── test/              lint.test.ts checks workflows/ and policies/ are safe to replay
-```
-
-Run state goes to `.sanoma/` (ignored), including the ledger: one JSONL file per run in `.sanoma/ledger/`.
+To start one without Sanoma Cloud, `npx sanoma` in an empty directory writes the same layout for a laptop, with the `sanoma` package's own template.
 
 ## Run
 
-Needs Node 26 or later, pnpm and Docker. With [mise](https://mise.jdx.dev), `mise install` sets up Node and pnpm from `.mise.toml`.
+Needs Node 26 or later and pnpm (with [mise](https://mise.jdx.dev), `mise install` sets both up from `.mise.toml`).
 
 ```sh
 pnpm install
-pnpm db:up      # Postgres 17 on localhost:5434
-pnpm test       # also: pnpm typecheck, pnpm lint, pnpm format:check
-pnpm db:down
+pnpm dev      # the company's own Postgres (.sanoma/postgres), the worker and the app, at the printed address
+pnpm check    # tsc, the lint, the policies, what the worker would refuse, the sites' build and types, and every scenario
 ```
 
-The worker uses `SANOMA_DATABASE_URL`, else `postgresql://postgres:dbos@localhost:5434/company`. Tests use databases of their own, one per test file (`testDatabaseUrl("<file>")` from `@sanoma/testing` gives `company_test_<file>`; `SANOMA_TEST_DATABASE_URL` changes the base), so they never pick up runs started against the development one.
-
-Until the `@sanoma/*` packages are published to npm, `pnpm install` cannot resolve them. Build tarballs from the sanoma repo with `pnpm pack`, put them in `.packs/`, and point each dependency at its tarball (`"@sanoma/workflows": "file:.packs/sanoma-workflows-0.1.0.tgz"`), as Sanoma's own configuration repo does.
-
-## Add a workflow
-
-1. Add the connector for each vendor the workflow calls, such as `@sanoma/connector-ghost`.
-2. Write `workflows/<name>.ts`. It lists every operation it calls in `uses`, and `ctx` exposes those and nothing else:
-
-   ```ts
-   import { ghost } from "@sanoma/connector-ghost";
-   import { defineWorkflow } from "@sanoma/workflows";
-   import { z } from "zod";
-
-   export default defineWorkflow({
-     name: "publish-post",
-     trigger: "manual",
-     input: z.object({ title: z.string(), html: z.string() }),
-     uses: [ghost.post.create, ghost.post.publish, "approval"],
-     run: async (ctx, { title, html }) => {
-       const post = await ctx.ghost.post.create({ title, html, status: "draft" });
-       // Covers the publish, so a policy using `approvedFor` lets it through on this sign-off.
-       await ctx.approval("Review the post", { approver: "editor", links: [post.url], covers: [ghost.post.publish] });
-       return ctx.ghost.post.publish({ id: post.id });
-     },
-   });
-   ```
-
-   Workflows are replayed after a restart, so they must do the same thing every time: use `ctx.now()` and `ctx.sleep()` instead of `Date` and timers, take configuration as input instead of `process.env`, and import only from `@sanoma/*`, zod and relative files. `pnpm lint` (with the rules `@sanoma/workflows` ships, which `.oxlintrc.json` extends) and `pnpm test` check for this.
-
-   Define `name` as a string literal, as above: the app finds the workflow in its file by that literal to show its source beside the outline, and without it shows only the text of `run`.
-
-3. In `sanoma.config.ts`, add the workflow to `workflows`, its connectors to `connectors`, and a driver for each vendor to `drivers`. Each connector has two: the real one from its `/driver` entry (`ghostDriver()` from `@sanoma/connector-ghost/driver`, `resendDriver({ from })`, `blueskyDriver()`), which reads its credentials from the environment on every call, and a fake from its `/fake` entry (`fakeGhost`, `fakeResend`, `fakeBluesky`) for development and tests. Pass the fakes one `calls` array to see every vendor's calls in one order, and `{ file: ".sanoma/fake-ghost.json" }` to keep a fake's state on disk. Only the config imports drivers; the lint refuses a workflow that does. Each connector's README names its variables and the vendor plan it needs.
-4. Decide what needs approval in `policies/policy.ts`; the comment there shows the pattern (`approvedFor`).
-5. Add a test that starts a worker with the config (`startTestWorker` from `@sanoma/testing`, on `testDatabaseUrl("<file>")`), starts the workflow with `SanomaClient` as someone (`startedBy: { id: "alice" }`), decides its approvals (`client.decide(runId, { decision: "approve", by: { id: "editor" } })`) and checks the ledger. Branch on `errorCode(err)`, not `instanceof`.
-6. Describe how the workflow should go as scenarios in `scenarios/<workflow>/<name>.feature` (the format is in [scenarios/README.md](scenarios/README.md)), and add each vendor's fake to `fakes` in `sanoma.config.ts`. A scenario seeds the fakes, starts the workflow with an input and says which operations it expects. The app runs it from Sandbox on the workflow's page (its New run form) as a run marked sandbox, with its approvals in the inbox like any run; `describeScenarios(config)` from `@sanoma/testing/scenarios` runs every scenario as a vitest test, deciding the approvals the way the scenario says.
-
-## Versions
-
-Every run is stamped with the version of the worker that started it, `<appName>@<hash>`, and only a worker on that version picks it up after a restart. The version is automatic: a hash of each workflow's name, the source of its `run` function, its operations and its input schema. It does not see helper functions that `run` calls from elsewhere, the connectors' schemas, the drivers or the policy, so change those with no run in flight. `DBOS__APPVERSION` names a version instead.
-
-When a worker starts, it warns about unfinished runs it will not pick up, naming them: runs started on another version. Run that version to finish them, or reset the local database with `pnpm db:down && pnpm db:up`.
-
-## Credentials
-
-Vendor credentials live in a secret store, never in this repo. Do not commit tokens, API keys or `.env` files. The real drivers read them from the environment: export them in the shell, or keep them in an ignored `.env` and run with `node --env-file-if-exists=.env`.
+Credentials never go in this repository: `.env` (ignored) holds this machine's, and the app's connector pages store a vendor's encrypted in the database. On Sanoma Cloud the host delivers them.
 
 ## License
 
