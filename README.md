@@ -14,6 +14,8 @@ pnpm dev      # the company's own Postgres (.sanoma/postgres), the worker and th
 pnpm check    # tsc, the lint, the policies, what the worker would refuse, the sites' build and types, and every scenario
 ```
 
+GitHub Actions runs `pnpm check` on pull requests and pushes to main against a disposable Postgres service. Scenarios use connector fakes; the check neither provisions cloud resources nor needs vendor credentials.
+
 Credentials never go in this repository: `.env` (ignored) holds this machine's, and the app's connector pages store a vendor's encrypted in the database. On Sanoma Cloud the host delivers them.
 
 ## Credential storage
