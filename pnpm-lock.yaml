@@ -9,17 +9,17 @@ importers:
   .:
     dependencies:
       '@sanoma-ai/connector-github':
-        specifier: ^0.7.0
-        version: 0.7.0(@sanoma-ai/bridge@0.5.1(@sanoma-ai/workflows@0.10.12(supports-color@11.0.0)(zod@4.6.7))(zod@4.6.7))(@sanoma-ai/workflows@0.10.12(supports-color@11.0.0)(zod@4.6.7))(zod@4.6.7)
+        specifier: ^0.7.2
+        version: 0.7.2(@sanoma-ai/bridge@0.5.2(@sanoma-ai/workflows@0.11.0(supports-color@11.0.0)(zod@4.6.7))(zod@4.6.7))(@sanoma-ai/workflows@0.11.0(supports-color@11.0.0)(zod@4.6.7))(zod@4.6.7)
       '@sanoma-ai/connector-resend':
-        specifier: ^0.4.8
-        version: 0.4.8(@sanoma-ai/workflows@0.10.12(supports-color@11.0.0)(zod@4.6.7))(zod@4.6.7)
+        specifier: ^0.6.0
+        version: 0.6.0(@sanoma-ai/workflows@0.11.0(supports-color@11.0.0)(zod@4.6.7))(zod@4.6.7)
       '@sanoma-ai/connector-sanoma-cloud':
-        specifier: ^0.1.0
-        version: 0.1.0(@sanoma-ai/workflows@0.10.12(supports-color@11.0.0)(zod@4.6.7))(zod@4.6.7)
+        specifier: ^0.1.1
+        version: 0.1.1(@sanoma-ai/workflows@0.11.0(supports-color@11.0.0)(zod@4.6.7))(zod@4.6.7)
       sanoma:
-        specifier: ^0.10.12
-        version: 0.10.12(@aws-sdk/credential-provider-node@3.972.92)(@opentelemetry/api@1.10.0)(@smithy/signature-v4@5.7.5)(@tanstack/query-core@5.105.0)(@tanstack/react-start@1.169.4(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(rolldown@1.2.16)(supports-color@11.0.0)(vite@8.3.5(@types/node@26.6.6)(jiti@2.7.0)(yaml@2.9.1)))(@tanstack/router-core@1.171.39)(jiti@2.7.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(rolldown@1.2.16)(supports-color@11.0.0)(ws@8.22.1)
+        specifier: ^0.11.0
+        version: 0.11.0(@aws-sdk/credential-provider-node@3.972.92)(@opentelemetry/api@1.10.0)(@smithy/signature-v4@5.7.5)(@tanstack/query-core@5.105.1)(@tanstack/react-start@1.169.4(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(rolldown@1.2.16)(supports-color@11.0.0)(vite@8.3.5(@types/node@26.6.6)(jiti@2.7.0)(yaml@2.9.1)))(@tanstack/router-core@1.171.39)(jiti@2.7.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(rolldown@1.2.16)(supports-color@11.0.0)(ws@8.22.1)
 
 packages:
 
@@ -346,8 +346,8 @@ packages:
       '@types/react':
         optional: true
 
-  '@better-auth/core@1.7.14':
-    resolution: {integrity: sha512-ByhdrGVwp/el+hoTYKSVOHIH23/lQj9TQ1txdGcWOg22tnfr3hJ6ukzySooeYj/R36XsQgBhkJqIp8mKsNeErA==}
+  '@better-auth/core@1.7.15':
+    resolution: {integrity: sha512-BetlCGMINY5GiQocDF9X2wD+9yWrSrAecQbcZUCDqXd2pAolPr15ZrFqYyjEXX6YKUdPPWotUmo8naE4NSyEVQ==}
     peerDependencies:
       '@better-auth/utils': ^0.4.2 || ^0.5.0
       '@better-fetch/fetch': 1.3.3
@@ -360,46 +360,46 @@ packages:
       '@opentelemetry/api':
         optional: true
 
-  '@better-auth/drizzle-adapter@1.7.14':
-    resolution: {integrity: sha512-5RC8Ec5Ur15FWsS4As9/VrlRbB3+9EfShxIpA5A1FcD6IgPxFvzQNkAm2+FYx9LUSqx47NPf9hBTG2GUCMP9Ig==}
+  '@better-auth/drizzle-adapter@1.7.15':
+    resolution: {integrity: sha512-HtFz2WovzJGfmIobhqaHNdTUA5EuXtCp8YdyMxS8at70usce/LMlh4CVc9hPAXl49XuJaDi8vp5Z9Cgk9dQCUA==}
     peerDependencies:
-      '@better-auth/core': ^1.7.14
+      '@better-auth/core': ^1.7.15
       '@better-auth/utils': ^0.4.2 || ^0.5.0
       drizzle-orm: ^0.45.2 || >=1.0.0-rc.1 <2.0.0
     peerDependenciesMeta:
       drizzle-orm:
         optional: true
 
-  '@better-auth/kysely-adapter@1.7.14':
-    resolution: {integrity: sha512-4wkqj8a8JVpWDYLlgzfbk7eOaWCFkL6HHQd6CLamFKaC8vNsXew1x4v5dE5O6dGr8j4g5qMISS+BAvOuIvBevg==}
+  '@better-auth/kysely-adapter@1.7.15':
+    resolution: {integrity: sha512-1anYpzH3A0i6W2J9EvqMAlCCVQ3NfLUKZGquJ4LfZzS8rC7iHSntpagqEvZeerZrAydtke2rMl91SSiNtKyVcQ==}
     peerDependencies:
-      '@better-auth/core': ^1.7.14
+      '@better-auth/core': ^1.7.15
       '@better-auth/utils': ^0.4.2 || ^0.5.0
       kysely: ^0.28.17 || ^0.29.0
     peerDependenciesMeta:
       kysely:
         optional: true
 
-  '@better-auth/memory-adapter@1.7.14':
-    resolution: {integrity: sha512-Ojv9BcmFyHuTHha9ZM/NUW1ut9J84wLngta+07Es0Ejn8kekqP5aHBpZd5Z8AvADs5iJUOWvQGFmGlPWAKJgBg==}
+  '@better-auth/memory-adapter@1.7.15':
+    resolution: {integrity: sha512-lsSgxCCn94QanigQrhdXOcQ2thb3ix8zOBQZySet6Tp1dK3pb+GmQ1ZQtamYgj5itvq99fEmLr4Em24XE2BTcA==}
     peerDependencies:
-      '@better-auth/core': ^1.7.14
+      '@better-auth/core': ^1.7.15
       '@better-auth/utils': ^0.4.2 || ^0.5.0
 
-  '@better-auth/mongo-adapter@1.7.14':
-    resolution: {integrity: sha512-6IA0RSPZFMdRwwnLZ9oWnDIiD0y0o0azTHUfa01BNU2AFJgMDkeiASUV3bKcJBskzQoyQrff74eFYTsTSeeVUQ==}
+  '@better-auth/mongo-adapter@1.7.15':
+    resolution: {integrity: sha512-Pku7yZcIuvGqsGy2cLws+7en8dLPyGmP9v0BHHtxEqtsFyc+DtLvv1AzHzNKQz5v52KlbUQ5Uflx5+Le0A1ALA==}
     peerDependencies:
-      '@better-auth/core': ^1.7.14
+      '@better-auth/core': ^1.7.15
       '@better-auth/utils': ^0.4.2 || ^0.5.0
       mongodb: ^6.0.0 || ^7.0.0
     peerDependenciesMeta:
       mongodb:
         optional: true
 
-  '@better-auth/prisma-adapter@1.7.14':
-    resolution: {integrity: sha512-mF6t5xqeZNWzUe0ErmrSdzQmtslJscmu9X8Mp5QmROlpnnAzvSc70RILu8lHms8CePt7N34+KRH1QvYjGFrVGQ==}
+  '@better-auth/prisma-adapter@1.7.15':
+    resolution: {integrity: sha512-YMMA2HnEPFcUNw/mJWxBxoAdRV2B1ZQ8rRsBJwwTQsC6sfZVYr9f/5zslizf6J7eRpOpgqpiwumSRhdeLf1EOg==}
     peerDependencies:
-      '@better-auth/core': ^1.7.14
+      '@better-auth/core': ^1.7.15
       '@better-auth/utils': ^0.4.2 || ^0.5.0
       '@prisma/client': ^5.0.0 || ^6.0.0 || ^7.0.0
       prisma: ^5.0.0 || ^6.0.0 || ^7.0.0
@@ -409,10 +409,10 @@ packages:
       prisma:
         optional: true
 
-  '@better-auth/telemetry@1.7.14':
-    resolution: {integrity: sha512-PtKFzsH7gje/WJuUPDjckOoNFazsq8NMt3AdiXIPzHl7tZULcNGTKAX8K7+yn0rG6cO/4mtMgpOjhtilElOnmg==}
+  '@better-auth/telemetry@1.7.15':
+    resolution: {integrity: sha512-qZq491FZNLRCFmBo97DK+wOKfKPcSMeP87BoqH1nWZc0FZi2fbS4vqmwgn9OdQU7LRjHs/757o64iao1vrvkKA==}
     peerDependencies:
-      '@better-auth/core': ^1.7.14
+      '@better-auth/core': ^1.7.15
       '@better-auth/utils': ^0.4.2 || ^0.5.0
       '@better-fetch/fetch': 1.3.3
 
@@ -1212,11 +1212,11 @@ packages:
   '@rolldown/pluginutils@1.0.1':
     resolution: {integrity: sha512-2j9bGt5Jh8hj+vPtgzPtl72j0yRxHAyumoo6TNfAjsLB04UtpSvPbPcDcBMxz7n+9CYB0c1GxQFxYRg2jimqGw==}
 
-  '@sanoma-ai/app@0.10.4':
-    resolution: {integrity: sha512-0d2/Ys3daEdBRUHFrybsfgcLrZ82YEKOL6Q4XT2Esp/baHBaNXJasrzhkqCD0fcTH1AjfvMm5ZxFXi4RDcrpsg==}
+  '@sanoma-ai/app@0.10.5':
+    resolution: {integrity: sha512-FfSmIFtxSE50HULRgCx3LIpZXZI9vJxqg0GI+MTNmBR7T8phUK66nDQcNlLbMR7z65Q9CYAx+SntbU6XJfbC8w==}
     engines: {node: '>=26'}
     peerDependencies:
-      '@sanoma-ai/workflows': ^0.10.11
+      '@sanoma-ai/workflows': ^0.11.0
 
   '@sanoma-ai/bridge-darwin-arm64@0.5.0':
     resolution: {integrity: sha512-IWHZJskw345XDdISgTZezaIAxTw4N9M0k38UcSfLb9N4fOhfZbeXH8mwPqXfZh6B3hW1fC4LKTxxAr+rCumsZA==}
@@ -1242,40 +1242,40 @@ packages:
     os: [linux]
     hasBin: true
 
-  '@sanoma-ai/bridge@0.5.1':
-    resolution: {integrity: sha512-kdTWJRdvj8IB7u3yOXNL5WvEWm1M0D04YrZhSobPmWSvdyazNlzaxaV2GJhrLI5DUrBW1WeJyp2dl2KYUB8ZZQ==}
+  '@sanoma-ai/bridge@0.5.2':
+    resolution: {integrity: sha512-XrvqlqFXEGnSxOUCsXRAy4hjGnVW+CqMFn4HpFblplUOjMRloez062O8tTV6bF5HAZSl1xGAbOLOM54O+Wiqiw==}
     engines: {node: '>=26'}
     hasBin: true
     peerDependencies:
-      '@sanoma-ai/workflows': ^0.10.3
+      '@sanoma-ai/workflows': ^0.11.0
       zod: ^4
 
-  '@sanoma-ai/connector-better-auth@0.2.1':
-    resolution: {integrity: sha512-FEY32Y4eDrG2N47egIjqtc1f5nkEMww136okDmpxRDoXc5NkCENrm568BSGO/MNRep3322F0tuUquKaGIteysw==}
+  '@sanoma-ai/connector-better-auth@0.2.2':
+    resolution: {integrity: sha512-DeKGTyIOxFz1pYIK8CMzn5Uo8M/0Gp0Z9mC4WeDphIkCbfj3B/rYvRhB/l0Ha/7snU0zXF2uGB2mJIip6rpJEA==}
     engines: {node: '>=26'}
     peerDependencies:
-      '@sanoma-ai/workflows': ^0.10.7
+      '@sanoma-ai/workflows': ^0.11.0
 
-  '@sanoma-ai/connector-github@0.7.0':
-    resolution: {integrity: sha512-U3lqbMkSiUTwdwuTh+Yh+gzspCdc00Bn3lMO1hSZVdxh7RTGsrA1r7pQB5Xh4mbWzIfYEgre75wX3VlwxVWIzg==}
+  '@sanoma-ai/connector-github@0.7.2':
+    resolution: {integrity: sha512-5O3JohLgysyojErX5NI3KCWkuVYHpnFeQBtyonRc4ptOOzp5PwOs42lIJmyBvhdcSVzB13jZbv6q3oWy4/zuNw==}
     engines: {node: '>=26'}
     peerDependencies:
-      '@sanoma-ai/bridge': ^0.5.1
-      '@sanoma-ai/workflows': ^0.10.3
+      '@sanoma-ai/bridge': ^0.5.2
+      '@sanoma-ai/workflows': ^0.11.0
       zod: ^4
 
-  '@sanoma-ai/connector-resend@0.4.8':
-    resolution: {integrity: sha512-ZK6toG11wqme3+myW/dZKlvIfYVgz57pscsIBY1x3Ah/1yO8GDlPULdMUqQcKYxgLTfJPFRsyBF+X83cAK8yKg==}
+  '@sanoma-ai/connector-resend@0.6.0':
+    resolution: {integrity: sha512-vPDqEl4Ch6Wpk3CFJEbC6zyv5if39L4CzxoXTQIWA4f+DAMpvFqgeF06BksSKzLKc9g59pMPl/EV475gRJTC0A==}
     engines: {node: '>=26'}
     peerDependencies:
-      '@sanoma-ai/workflows': ^0.10.0
+      '@sanoma-ai/workflows': ^0.11.0
       zod: ^4
 
-  '@sanoma-ai/connector-sanoma-cloud@0.1.0':
-    resolution: {integrity: sha512-pPDP5TILwKVrWROCpqPHjl2xDIfwepucFCapNmfzDysk3Dt+Dc8q6kgvc8llhyYDCv+bP/RimUckAiNY5E1JUA==}
+  '@sanoma-ai/connector-sanoma-cloud@0.1.1':
+    resolution: {integrity: sha512-cYpaP3gm7r92lBXAe9AGv4TLfiDFw5bg0fK9WJC2eLkzH1U+D58vTf85hfGAOHUPXcRRm2xDJN53e3L1pA5Q4Q==}
     engines: {node: '>=26'}
     peerDependencies:
-      '@sanoma-ai/workflows': ^0.10.3
+      '@sanoma-ai/workflows': ^0.11.0
       zod: ^4
 
   '@sanoma-ai/postgres-darwin-arm64@0.1.0':
@@ -1303,8 +1303,8 @@ packages:
     cpu: [x64, arm64]
     os: [win32]
 
-  '@sanoma-ai/workflows@0.10.12':
-    resolution: {integrity: sha512-GUdMhIDdt1ir7SlHh2W75PHiM3anaH2Bgpi14jaf1buo/t+haYVpjeJRLWJCzzf7dcEE5dP3I8GdLC7hkm4k4Q==}
+  '@sanoma-ai/workflows@0.11.0':
+    resolution: {integrity: sha512-kilN4vEoG+tJ99lOiIZEZg33XEcooQWwNN4WF5SuunQS7rtmzujcd+lMqucdoaP5d74CyW686eE/kymSNREDVQ==}
     engines: {node: '>=26'}
     peerDependencies:
       zod: ^4
@@ -1467,8 +1467,8 @@ packages:
     resolution: {integrity: sha512-y/xtNPNt/YeyoVxE/JCx+T7yjEzpezmbb+toK8DDD1P4m7Kzs5YR956+7OKexG3f8aXgC3rLZl7b1V+yNUSy5w==}
     engines: {node: '>=18'}
 
-  '@tanstack/query-core@5.105.0':
-    resolution: {integrity: sha512-7p56vRmT/z4UJ6sctGIdl5WRUQyUv53IUpUwEKi2g97zMbO7zh8ZsCLffGAvCPBR4xD72e3VXsDyLwXHhoNTMQ==}
+  '@tanstack/query-core@5.105.1':
+    resolution: {integrity: sha512-B/rNlZoZ54w1dlddiUt9oEe1SLM+37c00SKLJEg9YH+7as3Y54P81o9Fh+2ujZ36tXPnQJ5oVe7AcyEWkyFhPg==}
 
   '@tanstack/react-form@1.33.5':
     resolution: {integrity: sha512-LlRB28qJwO/QCGaHvWnbdh4haBgTFiZVmzA2uzxSBS3YA7/IqrQ6HOBK70CkFQ+DbflZ7NawsmSln13h5iIdTA==}
@@ -1479,8 +1479,8 @@ packages:
       '@tanstack/react-start':
         optional: true
 
-  '@tanstack/react-query@5.105.0':
-    resolution: {integrity: sha512-y+hMuDERvgg6ay1da0V1a6ZC0ZONt7dELxSFkqRZuwm7p1TTZs0MoXrPlBRflIpRoYjvzQVYxycnLImpFLhWrw==}
+  '@tanstack/react-query@5.105.1':
+    resolution: {integrity: sha512-qcu+/+PtBOjW8qU4/0l47QVmNG7hPOWsCLzP0bTRhE1X7HYa757C4732wXTUH0QhCjTV1yedX8onsCiEwlNYrA==}
     peerDependencies:
       '@types/react': ^18 || ^19
       react: ^18 || ^19
@@ -1918,8 +1918,8 @@ packages:
     engines: {node: '>=6.0.0'}
     hasBin: true
 
-  better-auth@1.7.14:
-    resolution: {integrity: sha512-QxDCI0pOCCHDYmruisKhKyrvOJ6Icv9xg0RA6ZUysfKFXENYwhNNpwUlkE/NmViH2nDMgkKcymmLr55pnpR9vw==}
+  better-auth@1.7.15:
+    resolution: {integrity: sha512-x2HmrQZy9yTG3H9iJ9pvaVGmLbI++ynOcJ3SGqFZnhEDscQSpG+1P9Xv41ceje2vw7dVE5+BbImDGneyhtW2Vg==}
     peerDependencies:
       '@lynx-js/react': '*'
       '@prisma/client': ^5.0.0 || ^6.0.0 || ^7.0.0
@@ -2435,6 +2435,10 @@ packages:
     resolution: {integrity: sha512-eAmLkjDjAFCVXg7A1unxHsLf961m6y17QFqXqAXGj/gVkKFrEICfStRfwUlGNfeCEjNRa32JEWOUTlYXPyyKvA==}
     engines: {node: '>=14'}
 
+  google-logging-utils@1.2.0:
+    resolution: {integrity: sha512-WE9av4wKDZgRjBwgVUabocx8T6/7o3Ca1Fat46FXDhXVAFibzNadedcOXrdgd1Kzmk8tsk/9ZH89Wyf/SqeZ3A==}
+    engines: {node: '>=18'}
+
   google-logging-utils@2.1.1:
     resolution: {integrity: sha512-jYZOPMaRGS3Hldyudft6bdibW9ZWUKBkMdB2TeSETkV1c2T9TR4zxEWZETHv9xJ8KHr2hgkNLaSa8kcEcwlpeQ==}
     engines: {node: '>=22'}
@@ -2610,8 +2614,8 @@ packages:
     resolution: {integrity: sha512-AC/7JofJvZGrrneWNaEnJeOLUx+JlGt7tNa0wZiRPT4MY1wmfKjt2+6O2p2uz2+skll8OZZmJMNqeke7kKbNgQ==}
     hasBin: true
 
-  jose@6.2.14:
-    resolution: {integrity: sha512-3JasLuki1NRLQvY4wCoC37KZk4qxoBx2k2aFqLxT84IezqW0bkJKnNtxnZj/Fu1xsQivoc/lytxaRHJoGLjJ1A==}
+  jose@6.2.15:
+    resolution: {integrity: sha512-qdF6ewcZARtef63fJ9AKKZPgxw+t7USH6HLXYcD4CrdmSvDp79rpJSPFEKc90QBeGS63u1KQtN2MZQHC0yDIzA==}
 
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
@@ -3312,8 +3316,8 @@ packages:
   safe-buffer@5.2.1:
     resolution: {integrity: sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==}
 
-  sanoma@0.10.12:
-    resolution: {integrity: sha512-U/WJLl1rGwml8worafyIGsm79YvkpZ8QgwzEkjpo2Q+43DpQbvtoBQOriinRMaEEMjlk4cHYvO96zQgBMrQrSQ==}
+  sanoma@0.11.0:
+    resolution: {integrity: sha512-7dBjlh7BljcIj1hgHsx9Bd8l+yeNHxN2dQjvE7ISpIaVHHhb/Cky0CM/HgWcU4kVfXSc0FhPaUxVDmtU8WHSCw==}
     engines: {node: '>=26'}
     hasBin: true
 
@@ -4344,49 +4348,49 @@ snapshots:
     optionalDependencies:
       '@types/react': 19.3.0
 
-  '@better-auth/core@1.7.14(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(@opentelemetry/api@1.10.0)(better-call@1.4.4(zod@4.6.7))(jose@6.2.14)(kysely@0.29.8)(nanostores@1.5.5)':
+  '@better-auth/core@1.7.15(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(@opentelemetry/api@1.10.0)(better-call@1.4.4(zod@4.6.7))(jose@6.2.15)(kysely@0.29.8)(nanostores@1.5.5)':
     dependencies:
       '@better-auth/utils': 0.5.1
       '@better-fetch/fetch': 1.3.3
       '@standard-schema/spec': 1.1.0
       better-call: 1.4.4(zod@4.6.7)
-      jose: 6.2.14
+      jose: 6.2.15
       kysely: 0.29.8
       nanostores: 1.5.5
       zod: 4.6.7
     optionalDependencies:
       '@opentelemetry/api': 1.10.0
 
-  '@better-auth/drizzle-adapter@1.7.14(@better-auth/core@1.7.14(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(@opentelemetry/api@1.10.0)(better-call@1.4.4(zod@4.6.7))(jose@6.2.14)(kysely@0.29.8)(nanostores@1.5.5))(@better-auth/utils@0.5.1)':
+  '@better-auth/drizzle-adapter@1.7.15(@better-auth/core@1.7.15(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(@opentelemetry/api@1.10.0)(better-call@1.4.4(zod@4.6.7))(jose@6.2.15)(kysely@0.29.8)(nanostores@1.5.5))(@better-auth/utils@0.5.1)':
     dependencies:
-      '@better-auth/core': 1.7.14(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(@opentelemetry/api@1.10.0)(better-call@1.4.4(zod@4.6.7))(jose@6.2.14)(kysely@0.29.8)(nanostores@1.5.5)
+      '@better-auth/core': 1.7.15(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(@opentelemetry/api@1.10.0)(better-call@1.4.4(zod@4.6.7))(jose@6.2.15)(kysely@0.29.8)(nanostores@1.5.5)
       '@better-auth/utils': 0.5.1
 
-  '@better-auth/kysely-adapter@1.7.14(@better-auth/core@1.7.14(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(@opentelemetry/api@1.10.0)(better-call@1.4.4(zod@4.6.7))(jose@6.2.14)(kysely@0.29.8)(nanostores@1.5.5))(@better-auth/utils@0.5.1)(kysely@0.29.8)':
+  '@better-auth/kysely-adapter@1.7.15(@better-auth/core@1.7.15(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(@opentelemetry/api@1.10.0)(better-call@1.4.4(zod@4.6.7))(jose@6.2.15)(kysely@0.29.8)(nanostores@1.5.5))(@better-auth/utils@0.5.1)(kysely@0.29.8)':
     dependencies:
-      '@better-auth/core': 1.7.14(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(@opentelemetry/api@1.10.0)(better-call@1.4.4(zod@4.6.7))(jose@6.2.14)(kysely@0.29.8)(nanostores@1.5.5)
+      '@better-auth/core': 1.7.15(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(@opentelemetry/api@1.10.0)(better-call@1.4.4(zod@4.6.7))(jose@6.2.15)(kysely@0.29.8)(nanostores@1.5.5)
       '@better-auth/utils': 0.5.1
     optionalDependencies:
       kysely: 0.29.8
 
-  '@better-auth/memory-adapter@1.7.14(@better-auth/core@1.7.14(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(@opentelemetry/api@1.10.0)(better-call@1.4.4(zod@4.6.7))(jose@6.2.14)(kysely@0.29.8)(nanostores@1.5.5))(@better-auth/utils@0.5.1)':
+  '@better-auth/memory-adapter@1.7.15(@better-auth/core@1.7.15(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(@opentelemetry/api@1.10.0)(better-call@1.4.4(zod@4.6.7))(jose@6.2.15)(kysely@0.29.8)(nanostores@1.5.5))(@better-auth/utils@0.5.1)':
     dependencies:
-      '@better-auth/core': 1.7.14(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(@opentelemetry/api@1.10.0)(better-call@1.4.4(zod@4.6.7))(jose@6.2.14)(kysely@0.29.8)(nanostores@1.5.5)
+      '@better-auth/core': 1.7.15(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(@opentelemetry/api@1.10.0)(better-call@1.4.4(zod@4.6.7))(jose@6.2.15)(kysely@0.29.8)(nanostores@1.5.5)
       '@better-auth/utils': 0.5.1
 
-  '@better-auth/mongo-adapter@1.7.14(@better-auth/core@1.7.14(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(@opentelemetry/api@1.10.0)(better-call@1.4.4(zod@4.6.7))(jose@6.2.14)(kysely@0.29.8)(nanostores@1.5.5))(@better-auth/utils@0.5.1)':
+  '@better-auth/mongo-adapter@1.7.15(@better-auth/core@1.7.15(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(@opentelemetry/api@1.10.0)(better-call@1.4.4(zod@4.6.7))(jose@6.2.15)(kysely@0.29.8)(nanostores@1.5.5))(@better-auth/utils@0.5.1)':
     dependencies:
-      '@better-auth/core': 1.7.14(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(@opentelemetry/api@1.10.0)(better-call@1.4.4(zod@4.6.7))(jose@6.2.14)(kysely@0.29.8)(nanostores@1.5.5)
+      '@better-auth/core': 1.7.15(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(@opentelemetry/api@1.10.0)(better-call@1.4.4(zod@4.6.7))(jose@6.2.15)(kysely@0.29.8)(nanostores@1.5.5)
       '@better-auth/utils': 0.5.1
 
-  '@better-auth/prisma-adapter@1.7.14(@better-auth/core@1.7.14(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(@opentelemetry/api@1.10.0)(better-call@1.4.4(zod@4.6.7))(jose@6.2.14)(kysely@0.29.8)(nanostores@1.5.5))(@better-auth/utils@0.5.1)':
+  '@better-auth/prisma-adapter@1.7.15(@better-auth/core@1.7.15(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(@opentelemetry/api@1.10.0)(better-call@1.4.4(zod@4.6.7))(jose@6.2.15)(kysely@0.29.8)(nanostores@1.5.5))(@better-auth/utils@0.5.1)':
     dependencies:
-      '@better-auth/core': 1.7.14(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(@opentelemetry/api@1.10.0)(better-call@1.4.4(zod@4.6.7))(jose@6.2.14)(kysely@0.29.8)(nanostores@1.5.5)
+      '@better-auth/core': 1.7.15(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(@opentelemetry/api@1.10.0)(better-call@1.4.4(zod@4.6.7))(jose@6.2.15)(kysely@0.29.8)(nanostores@1.5.5)
       '@better-auth/utils': 0.5.1
 
-  '@better-auth/telemetry@1.7.14(@better-auth/core@1.7.14(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(@opentelemetry/api@1.10.0)(better-call@1.4.4(zod@4.6.7))(jose@6.2.14)(kysely@0.29.8)(nanostores@1.5.5))(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)':
+  '@better-auth/telemetry@1.7.15(@better-auth/core@1.7.15(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(@opentelemetry/api@1.10.0)(better-call@1.4.4(zod@4.6.7))(jose@6.2.15)(kysely@0.29.8)(nanostores@1.5.5))(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)':
     dependencies:
-      '@better-auth/core': 1.7.14(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(@opentelemetry/api@1.10.0)(better-call@1.4.4(zod@4.6.7))(jose@6.2.14)(kysely@0.29.8)(nanostores@1.5.5)
+      '@better-auth/core': 1.7.15(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(@opentelemetry/api@1.10.0)(better-call@1.4.4(zod@4.6.7))(jose@6.2.15)(kysely@0.29.8)(nanostores@1.5.5)
       '@better-auth/utils': 0.5.1
       '@better-fetch/fetch': 1.3.3
 
@@ -5067,7 +5071,7 @@ snapshots:
 
   '@rolldown/pluginutils@1.0.1': {}
 
-  '@sanoma-ai/app@0.10.4(@aws-sdk/credential-provider-node@3.972.92)(@sanoma-ai/workflows@0.10.12(supports-color@11.0.0)(zod@4.6.7))(@smithy/signature-v4@5.7.5)(@tanstack/query-core@5.105.0)(@tanstack/router-core@1.171.39)(jiti@2.7.0)(rolldown@1.2.16)(supports-color@11.0.0)(ws@8.22.1)':
+  '@sanoma-ai/app@0.10.5(@aws-sdk/credential-provider-node@3.972.92)(@sanoma-ai/workflows@0.11.0(supports-color@11.0.0)(zod@4.6.7))(@smithy/signature-v4@5.7.5)(@tanstack/query-core@5.105.1)(@tanstack/router-core@1.171.39)(jiti@2.7.0)(rolldown@1.2.16)(supports-color@11.0.0)(ws@8.22.1)':
     dependencies:
       '@agentclientprotocol/sdk': 2.0.2(zod@4.6.7)
       '@ai-sdk/harness': 1.0.158(ws@8.22.1)(zod@4.6.7)
@@ -5086,12 +5090,12 @@ snapshots:
       '@fontsource/ibm-plex-mono': 5.3.0
       '@lezer/highlight': 1.2.5
       '@phosphor-icons/react': 2.1.10(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
-      '@sanoma-ai/workflows': 0.10.12(supports-color@11.0.0)(zod@4.6.7)
+      '@sanoma-ai/workflows': 0.11.0(supports-color@11.0.0)(zod@4.6.7)
       '@tailwindcss/vite': 4.3.3(vite@8.3.5(@types/node@26.6.6)(jiti@2.7.0)(yaml@2.9.1))
       '@tanstack/react-form': 1.33.5(@tanstack/react-start@1.169.4(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(rolldown@1.2.16)(supports-color@11.0.0)(vite@8.3.5(@types/node@26.6.6)(jiti@2.7.0)(yaml@2.9.1)))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
-      '@tanstack/react-query': 5.105.0(@types/react@19.3.0)(react@19.3.1)
+      '@tanstack/react-query': 5.105.1(@types/react@19.3.0)(react@19.3.1)
       '@tanstack/react-router': 1.170.46(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
-      '@tanstack/react-router-ssr-query': 1.167.3(@tanstack/query-core@5.105.0)(@tanstack/react-query@5.105.0(@types/react@19.3.0)(react@19.3.1))(@tanstack/react-router@1.170.46(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(@tanstack/router-core@1.171.39)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      '@tanstack/react-router-ssr-query': 1.167.3(@tanstack/query-core@5.105.1)(@tanstack/react-query@5.105.1(@types/react@19.3.0)(react@19.3.1))(@tanstack/react-router@1.170.46(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(@tanstack/router-core@1.171.39)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       '@tanstack/react-start': 1.169.4(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(rolldown@1.2.16)(supports-color@11.0.0)(vite@8.3.5(@types/node@26.6.6)(jiti@2.7.0)(yaml@2.9.1))
       '@types/node': 26.6.6
       '@types/react': 19.3.0
@@ -5168,12 +5172,12 @@ snapshots:
   '@sanoma-ai/bridge-linux-x64@0.5.0':
     optional: true
 
-  '@sanoma-ai/bridge@0.5.1(@sanoma-ai/workflows@0.10.12(supports-color@11.0.0)(zod@4.6.7))(zod@4.6.7)':
+  '@sanoma-ai/bridge@0.5.2(@sanoma-ai/workflows@0.11.0(supports-color@11.0.0)(zod@4.6.7))(zod@4.6.7)':
     dependencies:
       '@bufbuild/protobuf': 2.16.0
       '@connectrpc/connect': 2.3.0(@bufbuild/protobuf@2.16.0)
       '@connectrpc/connect-node': 2.3.0(@bufbuild/protobuf@2.16.0)(@connectrpc/connect@2.3.0(@bufbuild/protobuf@2.16.0))
-      '@sanoma-ai/workflows': 0.10.12(supports-color@11.0.0)(zod@4.6.7)
+      '@sanoma-ai/workflows': 0.11.0(supports-color@11.0.0)(zod@4.6.7)
       zod: 4.6.7
     optionalDependencies:
       '@sanoma-ai/bridge-darwin-arm64': 0.5.0
@@ -5181,10 +5185,10 @@ snapshots:
       '@sanoma-ai/bridge-linux-arm64': 0.5.0
       '@sanoma-ai/bridge-linux-x64': 0.5.0
 
-  '@sanoma-ai/connector-better-auth@0.2.1(@opentelemetry/api@1.10.0)(@sanoma-ai/workflows@0.10.12(supports-color@11.0.0)(zod@4.6.7))(@tanstack/react-start@1.169.4(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(rolldown@1.2.16)(supports-color@11.0.0)(vite@8.3.5(@types/node@26.6.6)(jiti@2.7.0)(yaml@2.9.1)))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)':
+  '@sanoma-ai/connector-better-auth@0.2.2(@opentelemetry/api@1.10.0)(@sanoma-ai/workflows@0.11.0(supports-color@11.0.0)(zod@4.6.7))(@tanstack/react-start@1.169.4(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(rolldown@1.2.16)(supports-color@11.0.0)(vite@8.3.5(@types/node@26.6.6)(jiti@2.7.0)(yaml@2.9.1)))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)':
     dependencies:
-      '@sanoma-ai/workflows': 0.10.12(supports-color@11.0.0)(zod@4.6.7)
-      better-auth: 1.7.14(@opentelemetry/api@1.10.0)(@tanstack/react-start@1.169.4(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(rolldown@1.2.16)(supports-color@11.0.0)(vite@8.3.5(@types/node@26.6.6)(jiti@2.7.0)(yaml@2.9.1)))(pg@8.23.1)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      '@sanoma-ai/workflows': 0.11.0(supports-color@11.0.0)(zod@4.6.7)
+      better-auth: 1.7.15(@opentelemetry/api@1.10.0)(@tanstack/react-start@1.169.4(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(rolldown@1.2.16)(supports-color@11.0.0)(vite@8.3.5(@types/node@26.6.6)(jiti@2.7.0)(yaml@2.9.1)))(pg@8.23.1)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       kysely: 0.29.8
       pg: 8.23.1
     transitivePeerDependencies:
@@ -5208,20 +5212,20 @@ snapshots:
       - vitest
       - vue
 
-  '@sanoma-ai/connector-github@0.7.0(@sanoma-ai/bridge@0.5.1(@sanoma-ai/workflows@0.10.12(supports-color@11.0.0)(zod@4.6.7))(zod@4.6.7))(@sanoma-ai/workflows@0.10.12(supports-color@11.0.0)(zod@4.6.7))(zod@4.6.7)':
+  '@sanoma-ai/connector-github@0.7.2(@sanoma-ai/bridge@0.5.2(@sanoma-ai/workflows@0.11.0(supports-color@11.0.0)(zod@4.6.7))(zod@4.6.7))(@sanoma-ai/workflows@0.11.0(supports-color@11.0.0)(zod@4.6.7))(zod@4.6.7)':
     dependencies:
-      '@sanoma-ai/bridge': 0.5.1(@sanoma-ai/workflows@0.10.12(supports-color@11.0.0)(zod@4.6.7))(zod@4.6.7)
-      '@sanoma-ai/workflows': 0.10.12(supports-color@11.0.0)(zod@4.6.7)
+      '@sanoma-ai/bridge': 0.5.2(@sanoma-ai/workflows@0.11.0(supports-color@11.0.0)(zod@4.6.7))(zod@4.6.7)
+      '@sanoma-ai/workflows': 0.11.0(supports-color@11.0.0)(zod@4.6.7)
       zod: 4.6.7
 
-  '@sanoma-ai/connector-resend@0.4.8(@sanoma-ai/workflows@0.10.12(supports-color@11.0.0)(zod@4.6.7))(zod@4.6.7)':
+  '@sanoma-ai/connector-resend@0.6.0(@sanoma-ai/workflows@0.11.0(supports-color@11.0.0)(zod@4.6.7))(zod@4.6.7)':
     dependencies:
-      '@sanoma-ai/workflows': 0.10.12(supports-color@11.0.0)(zod@4.6.7)
+      '@sanoma-ai/workflows': 0.11.0(supports-color@11.0.0)(zod@4.6.7)
       zod: 4.6.7
 
-  '@sanoma-ai/connector-sanoma-cloud@0.1.0(@sanoma-ai/workflows@0.10.12(supports-color@11.0.0)(zod@4.6.7))(zod@4.6.7)':
+  '@sanoma-ai/connector-sanoma-cloud@0.1.1(@sanoma-ai/workflows@0.11.0(supports-color@11.0.0)(zod@4.6.7))(zod@4.6.7)':
     dependencies:
-      '@sanoma-ai/workflows': 0.10.12(supports-color@11.0.0)(zod@4.6.7)
+      '@sanoma-ai/workflows': 0.11.0(supports-color@11.0.0)(zod@4.6.7)
       zod: 4.6.7
 
   '@sanoma-ai/postgres-darwin-arm64@0.1.0':
@@ -5239,7 +5243,7 @@ snapshots:
   '@sanoma-ai/postgres-win32-x64@0.1.0':
     optional: true
 
-  '@sanoma-ai/workflows@0.10.12(supports-color@11.0.0)(zod@4.6.7)':
+  '@sanoma-ai/workflows@0.11.0(supports-color@11.0.0)(zod@4.6.7)':
     dependencies:
       '@ai-sdk/provider': 4.0.34
       '@cedar-policy/cedar-wasm': 4.14.0
@@ -5423,7 +5427,7 @@ snapshots:
 
   '@tanstack/pacer-lite@0.1.1': {}
 
-  '@tanstack/query-core@5.105.0': {}
+  '@tanstack/query-core@5.105.1': {}
 
   '@tanstack/react-form@1.33.5(@tanstack/react-start@1.169.4(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(rolldown@1.2.16)(supports-color@11.0.0)(vite@8.3.5(@types/node@26.6.6)(jiti@2.7.0)(yaml@2.9.1)))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)':
     dependencies:
@@ -5435,19 +5439,19 @@ snapshots:
     transitivePeerDependencies:
       - react-dom
 
-  '@tanstack/react-query@5.105.0(@types/react@19.3.0)(react@19.3.1)':
+  '@tanstack/react-query@5.105.1(@types/react@19.3.0)(react@19.3.1)':
     dependencies:
-      '@tanstack/query-core': 5.105.0
+      '@tanstack/query-core': 5.105.1
       react: 19.3.1
     optionalDependencies:
       '@types/react': 19.3.0
 
-  '@tanstack/react-router-ssr-query@1.167.3(@tanstack/query-core@5.105.0)(@tanstack/react-query@5.105.0(@types/react@19.3.0)(react@19.3.1))(@tanstack/react-router@1.170.46(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(@tanstack/router-core@1.171.39)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)':
+  '@tanstack/react-router-ssr-query@1.167.3(@tanstack/query-core@5.105.1)(@tanstack/react-query@5.105.1(@types/react@19.3.0)(react@19.3.1))(@tanstack/react-router@1.170.46(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(@tanstack/router-core@1.171.39)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)':
     dependencies:
-      '@tanstack/query-core': 5.105.0
-      '@tanstack/react-query': 5.105.0(@types/react@19.3.0)(react@19.3.1)
+      '@tanstack/query-core': 5.105.1
+      '@tanstack/react-query': 5.105.1(@types/react@19.3.0)(react@19.3.1)
       '@tanstack/react-router': 1.170.46(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
-      '@tanstack/router-ssr-query-core': 1.169.3(@tanstack/query-core@5.105.0)(@tanstack/router-core@1.171.39)
+      '@tanstack/router-ssr-query-core': 1.169.3(@tanstack/query-core@5.105.1)(@tanstack/router-core@1.171.39)
       react: 19.3.1
       react-dom: 19.3.1(react@19.3.1)
     transitivePeerDependencies:
@@ -5582,9 +5586,9 @@ snapshots:
       - supports-color
       - unloader
 
-  '@tanstack/router-ssr-query-core@1.169.3(@tanstack/query-core@5.105.0)(@tanstack/router-core@1.171.39)':
+  '@tanstack/router-ssr-query-core@1.169.3(@tanstack/query-core@5.105.1)(@tanstack/router-core@1.171.39)':
     dependencies:
-      '@tanstack/query-core': 5.105.0
+      '@tanstack/query-core': 5.105.1
       '@tanstack/router-core': 1.171.39
 
   '@tanstack/router-utils@1.162.4(supports-color@11.0.0)':
@@ -5876,22 +5880,22 @@ snapshots:
 
   baseline-browser-mapping@2.11.34: {}
 
-  better-auth@1.7.14(@opentelemetry/api@1.10.0)(@tanstack/react-start@1.169.4(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(rolldown@1.2.16)(supports-color@11.0.0)(vite@8.3.5(@types/node@26.6.6)(jiti@2.7.0)(yaml@2.9.1)))(pg@8.23.1)(react-dom@19.3.1(react@19.3.1))(react@19.3.1):
+  better-auth@1.7.15(@opentelemetry/api@1.10.0)(@tanstack/react-start@1.169.4(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(rolldown@1.2.16)(supports-color@11.0.0)(vite@8.3.5(@types/node@26.6.6)(jiti@2.7.0)(yaml@2.9.1)))(pg@8.23.1)(react-dom@19.3.1(react@19.3.1))(react@19.3.1):
     dependencies:
-      '@better-auth/core': 1.7.14(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(@opentelemetry/api@1.10.0)(better-call@1.4.4(zod@4.6.7))(jose@6.2.14)(kysely@0.29.8)(nanostores@1.5.5)
-      '@better-auth/drizzle-adapter': 1.7.14(@better-auth/core@1.7.14(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(@opentelemetry/api@1.10.0)(better-call@1.4.4(zod@4.6.7))(jose@6.2.14)(kysely@0.29.8)(nanostores@1.5.5))(@better-auth/utils@0.5.1)
-      '@better-auth/kysely-adapter': 1.7.14(@better-auth/core@1.7.14(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(@opentelemetry/api@1.10.0)(better-call@1.4.4(zod@4.6.7))(jose@6.2.14)(kysely@0.29.8)(nanostores@1.5.5))(@better-auth/utils@0.5.1)(kysely@0.29.8)
-      '@better-auth/memory-adapter': 1.7.14(@better-auth/core@1.7.14(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(@opentelemetry/api@1.10.0)(better-call@1.4.4(zod@4.6.7))(jose@6.2.14)(kysely@0.29.8)(nanostores@1.5.5))(@better-auth/utils@0.5.1)
-      '@better-auth/mongo-adapter': 1.7.14(@better-auth/core@1.7.14(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(@opentelemetry/api@1.10.0)(better-call@1.4.4(zod@4.6.7))(jose@6.2.14)(kysely@0.29.8)(nanostores@1.5.5))(@better-auth/utils@0.5.1)
-      '@better-auth/prisma-adapter': 1.7.14(@better-auth/core@1.7.14(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(@opentelemetry/api@1.10.0)(better-call@1.4.4(zod@4.6.7))(jose@6.2.14)(kysely@0.29.8)(nanostores@1.5.5))(@better-auth/utils@0.5.1)
-      '@better-auth/telemetry': 1.7.14(@better-auth/core@1.7.14(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(@opentelemetry/api@1.10.0)(better-call@1.4.4(zod@4.6.7))(jose@6.2.14)(kysely@0.29.8)(nanostores@1.5.5))(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)
+      '@better-auth/core': 1.7.15(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(@opentelemetry/api@1.10.0)(better-call@1.4.4(zod@4.6.7))(jose@6.2.15)(kysely@0.29.8)(nanostores@1.5.5)
+      '@better-auth/drizzle-adapter': 1.7.15(@better-auth/core@1.7.15(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(@opentelemetry/api@1.10.0)(better-call@1.4.4(zod@4.6.7))(jose@6.2.15)(kysely@0.29.8)(nanostores@1.5.5))(@better-auth/utils@0.5.1)
+      '@better-auth/kysely-adapter': 1.7.15(@better-auth/core@1.7.15(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(@opentelemetry/api@1.10.0)(better-call@1.4.4(zod@4.6.7))(jose@6.2.15)(kysely@0.29.8)(nanostores@1.5.5))(@better-auth/utils@0.5.1)(kysely@0.29.8)
+      '@better-auth/memory-adapter': 1.7.15(@better-auth/core@1.7.15(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(@opentelemetry/api@1.10.0)(better-call@1.4.4(zod@4.6.7))(jose@6.2.15)(kysely@0.29.8)(nanostores@1.5.5))(@better-auth/utils@0.5.1)
+      '@better-auth/mongo-adapter': 1.7.15(@better-auth/core@1.7.15(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(@opentelemetry/api@1.10.0)(better-call@1.4.4(zod@4.6.7))(jose@6.2.15)(kysely@0.29.8)(nanostores@1.5.5))(@better-auth/utils@0.5.1)
+      '@better-auth/prisma-adapter': 1.7.15(@better-auth/core@1.7.15(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(@opentelemetry/api@1.10.0)(better-call@1.4.4(zod@4.6.7))(jose@6.2.15)(kysely@0.29.8)(nanostores@1.5.5))(@better-auth/utils@0.5.1)
+      '@better-auth/telemetry': 1.7.15(@better-auth/core@1.7.15(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)(@opentelemetry/api@1.10.0)(better-call@1.4.4(zod@4.6.7))(jose@6.2.15)(kysely@0.29.8)(nanostores@1.5.5))(@better-auth/utils@0.5.1)(@better-fetch/fetch@1.3.3)
       '@better-auth/utils': 0.5.1
       '@better-fetch/fetch': 1.3.3
       '@noble/ciphers': 2.4.0
       '@noble/hashes': 2.4.0
       better-call: 1.4.4(zod@4.6.7)
       defu: 6.1.7
-      jose: 6.2.14
+      jose: 6.2.15
       kysely: 0.29.8
       nanostores: 1.5.5
       zod: 4.6.7
@@ -6265,7 +6269,7 @@ snapshots:
   gcp-metadata@8.1.2(supports-color@11.0.0):
     dependencies:
       gaxios: 7.3.1(supports-color@11.0.0)
-      google-logging-utils: 1.1.3
+      google-logging-utils: 1.2.0
       json-bigint: 1.0.0
     transitivePeerDependencies:
       - supports-color
@@ -6342,6 +6346,8 @@ snapshots:
       - supports-color
 
   google-logging-utils@1.1.3: {}
+
+  google-logging-utils@1.2.0: {}
 
   google-logging-utils@2.1.1: {}
 
@@ -6465,7 +6471,7 @@ snapshots:
 
   jiti@2.7.0: {}
 
-  jose@6.2.14: {}
+  jose@6.2.15: {}
 
   js-tokens@4.0.0: {}
 
@@ -7099,12 +7105,12 @@ snapshots:
 
   safe-buffer@5.2.1: {}
 
-  sanoma@0.10.12(@aws-sdk/credential-provider-node@3.972.92)(@opentelemetry/api@1.10.0)(@smithy/signature-v4@5.7.5)(@tanstack/query-core@5.105.0)(@tanstack/react-start@1.169.4(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(rolldown@1.2.16)(supports-color@11.0.0)(vite@8.3.5(@types/node@26.6.6)(jiti@2.7.0)(yaml@2.9.1)))(@tanstack/router-core@1.171.39)(jiti@2.7.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(rolldown@1.2.16)(supports-color@11.0.0)(ws@8.22.1):
+  sanoma@0.11.0(@aws-sdk/credential-provider-node@3.972.92)(@opentelemetry/api@1.10.0)(@smithy/signature-v4@5.7.5)(@tanstack/query-core@5.105.1)(@tanstack/react-start@1.169.4(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(rolldown@1.2.16)(supports-color@11.0.0)(vite@8.3.5(@types/node@26.6.6)(jiti@2.7.0)(yaml@2.9.1)))(@tanstack/router-core@1.171.39)(jiti@2.7.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(rolldown@1.2.16)(supports-color@11.0.0)(ws@8.22.1):
     dependencies:
-      '@sanoma-ai/app': 0.10.4(@aws-sdk/credential-provider-node@3.972.92)(@sanoma-ai/workflows@0.10.12(supports-color@11.0.0)(zod@4.6.7))(@smithy/signature-v4@5.7.5)(@tanstack/query-core@5.105.0)(@tanstack/router-core@1.171.39)(jiti@2.7.0)(rolldown@1.2.16)(supports-color@11.0.0)(ws@8.22.1)
-      '@sanoma-ai/bridge': 0.5.1(@sanoma-ai/workflows@0.10.12(supports-color@11.0.0)(zod@4.6.7))(zod@4.6.7)
-      '@sanoma-ai/connector-better-auth': 0.2.1(@opentelemetry/api@1.10.0)(@sanoma-ai/workflows@0.10.12(supports-color@11.0.0)(zod@4.6.7))(@tanstack/react-start@1.169.4(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(rolldown@1.2.16)(supports-color@11.0.0)(vite@8.3.5(@types/node@26.6.6)(jiti@2.7.0)(yaml@2.9.1)))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
-      '@sanoma-ai/workflows': 0.10.12(supports-color@11.0.0)(zod@4.6.7)
+      '@sanoma-ai/app': 0.10.5(@aws-sdk/credential-provider-node@3.972.92)(@sanoma-ai/workflows@0.11.0(supports-color@11.0.0)(zod@4.6.7))(@smithy/signature-v4@5.7.5)(@tanstack/query-core@5.105.1)(@tanstack/router-core@1.171.39)(jiti@2.7.0)(rolldown@1.2.16)(supports-color@11.0.0)(ws@8.22.1)
+      '@sanoma-ai/bridge': 0.5.2(@sanoma-ai/workflows@0.11.0(supports-color@11.0.0)(zod@4.6.7))(zod@4.6.7)
+      '@sanoma-ai/connector-better-auth': 0.2.2(@opentelemetry/api@1.10.0)(@sanoma-ai/workflows@0.11.0(supports-color@11.0.0)(zod@4.6.7))(@tanstack/react-start@1.169.4(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(rolldown@1.2.16)(supports-color@11.0.0)(vite@8.3.5(@types/node@26.6.6)(jiti@2.7.0)(yaml@2.9.1)))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      '@sanoma-ai/workflows': 0.11.0(supports-color@11.0.0)(zod@4.6.7)
       '@types/node': 26.6.6
       oxlint: 1.90.0
       pg: 8.23.1

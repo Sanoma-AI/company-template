@@ -31,7 +31,7 @@ npm run check       # tsc, the lint, the policies, what the worker would refuse,
 npm run env         # rewrites .env.example from the connectors' variables
 ```
 
-On Sanoma Cloud the host runs `main` and there is no agent in the app: edit the repository on a machine of your own (the Sanoma app for Mac, or `npm run dev` here) and merge a change to deploy it. Sign-in codes go out through Resend (`login: { sender: resend.emails.send }` in `sanoma.config.ts`): the host is given Sanoma's sender, for codes only; on a laptop set `RESEND_API_KEY` and `RESEND_FROM` in `.env` or on the Resend connector page, or sign in by `id`, which needs no sender. A workflow that emails the company's own contacts brings the company's own Resend key.
+On Sanoma Cloud the host runs `main` and there is no agent in the app: edit the repository on a machine of your own (the Sanoma app for Mac, or `npm run dev` here) and merge a change to deploy it. Sign-in codes go out through Resend: `login.sender` names the operation and `login.from` names the sender address in `sanoma.config.ts`. The Cloud host supplies Sanoma's Resend key for codes. Locally or on BYOC, supply your own `RESEND_API_KEY` and change `login.from` to an address on your verified domain, or sign in locally by `id`, which needs no sender. A workflow that emails the company's own contacts brings the company's own Resend key and passes its sender in the operation's `from` input.
 
 ## Rules
 

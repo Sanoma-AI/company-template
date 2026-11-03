@@ -8,10 +8,10 @@
     "env": "sanoma env"
   },
   "dependencies": {
-    "@sanoma-ai/connector-github": "^0.7.0",
-    "@sanoma-ai/connector-resend": "^0.4.8",
-    "@sanoma-ai/connector-sanoma-cloud": "^0.1.0",
-    "sanoma": "^0.10.12"
+    "@sanoma-ai/connector-github": "^0.7.2",
+    "@sanoma-ai/connector-resend": "^0.6.0",
+    "@sanoma-ai/connector-sanoma-cloud": "^0.1.1",
+    "sanoma": "^0.11.0"
   },
   "engines": {
     "node": ">=26"
