@@ -11,7 +11,7 @@
     "@sanoma-ai/connector-github": "^0.8.2",
     "@sanoma-ai/connector-resend": "^0.6.0",
     "@sanoma-ai/connector-sanoma-cloud": "^0.2.0",
-    "sanoma": "^0.11.13"
+    "sanoma": "^0.11.15"
   },
   "engines": {
     "node": ">=26"
