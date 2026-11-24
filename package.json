@@ -8,13 +8,17 @@
     "env": "sanoma env"
   },
   "dependencies": {
-    "@sanoma-ai/connector-github": "^0.8.2",
-    "@sanoma-ai/connector-resend": "^0.6.0",
-    "@sanoma-ai/connector-sanoma-cloud": "^0.2.0",
-    "sanoma": "^0.11.17"
+    "@sanoma-ai/connector-anthropic": "0.11.25",
+    "@sanoma-ai/connector-github": "0.11.25",
+    "@sanoma-ai/connector-openai": "0.11.25",
+    "@sanoma-ai/connector-opencode": "0.11.25",
+    "@sanoma-ai/connector-pi": "0.11.25",
+    "@sanoma-ai/connector-resend": "0.11.25",
+    "@sanoma-ai/connector-sanoma-cloud": "0.11.25",
+    "sanoma": "0.11.25"
   },
   "engines": {
     "node": ">=26"
   },
-  "packageManager": "pnpm@11.15.1"
+  "packageManager": "pnpm@11.28.6"
 }
